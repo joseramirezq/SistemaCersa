@@ -4,6 +4,7 @@
 <script src="vistas/js/off-canvas.js"></script>
 <script src="vistas/js/misc.js"></script>
 <script src="vistas/js/chart.js"></script>
+<script src="vistas/js/main.js"></script>
  
 <script src="vistas/js2/js/lib/data-table/datatables.min.js"></script>
 <script src="vistas/js2/js/lib/data-table/dataTables.bootstrap.min.js"></script>
@@ -23,8 +24,6 @@ $(document).ready(function() {
 </script>
 
 
-<script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="vistas/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 <script type="text/javascript" src="vistas/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 <script type="text/javascript">
@@ -61,3 +60,14 @@ $(document).ready(function() {
     });
 </script>
 
+
+<!--alertas-->
+<script src="vistas/js/jquery-3.1.1.min.js"></script>
+	<script src="vistas/js/sweetalert2.min.js"></script>
+	
+
+	
+	<script src="vistas/js/main.js"></script>
+	<script>
+		$.material.init();
+	</script>

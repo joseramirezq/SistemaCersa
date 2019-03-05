@@ -22,8 +22,9 @@
                 <h1 class="card-title"> Verifique todos los datos ingresados antes de confirmar</h1>
                 <hr>
 
-                <form class="forms-sample">
-                    <div class="row">
+                <form data-form="save"  action="<?php echo SERVERURL;?>ajax/administradorAjax.php" method="POST" class="forms-sample FormularioAjax" 
+                autocomplete="off" enctype="multipart/form-data">
+                 <div class="row">
                         <div class="col-md-4">
                             <!--nombre/apellidos/correo-->
 
@@ -92,7 +93,7 @@
                     </div>
                     <div class="row">
                         <div class="form-group">
-                            <a href="alumnodetalle.php" class="btn btn-success"><i class="fa fa-check"></i> Agregar</a>
+                            <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Agregar</button>
                             <button class="btn btn-info"><i class="fa fa-meh-o"></i> Cancel</button>
                         </div>
                     </div>

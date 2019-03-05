@@ -124,7 +124,7 @@
                                 <td class="text-danger"> 964923450</td>
                                 <td>Cajamarca</td>
                                 <td>
-                                    <a href="alumnodetalle.php" class="btn btn-inverse-dark ">Ver</a>
+                                    <a href="<?php SERVERURL;?>detallecliente" class="btn btn-inverse-dark ">Ver</a>
                                 </td>
                             </tr>
                             <!--fin de registro de un alumno-->

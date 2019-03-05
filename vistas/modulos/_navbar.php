@@ -9,6 +9,7 @@
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
+       
           <li class="nav-item">
             <a href="home" class="nav-link">Inicio
               <span class="badge badge-primary ml-1"><i class="fa fa-book"></i> Cursos/Diplomados <i class="fa fa-graduation-cap"></i></span>

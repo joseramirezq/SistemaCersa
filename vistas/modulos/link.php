@@ -5,5 +5,5 @@
   <link rel="stylesheet" href="vistas/css/style.css">
   <link rel="stylesheet" href="vistas/css/bootstrap-datetimepicker.css">
   <link rel="stylesheet" href="vistas/css/bootstrap-datetimepicker.min.css">
-  
+  <link rel="stylesheet" href="vistas/css/sweetalert2.css">
  <link rel="shortcut icon" href="vistas/images/favicon.ico" />

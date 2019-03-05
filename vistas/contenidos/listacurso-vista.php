@@ -5,7 +5,7 @@
       <div class="card-body">
         <h3 class="text-primary">Cursos / Diplomados
           <div class="btn-group dropdown float-right">
-            <a href="cursonuevo.php"><button type="button" class="btn btn-success  btn-sm">
+            <a href="<?php SERVERURL;?>agregarcurso"><button type="button" class="btn btn-success  btn-sm">
                 <i class="fa fa-plus"></i> Agregar nuevo
               </button>
             </a>

@@ -9,12 +9,22 @@ class vistasModelo
         $listaBlanca = [
             "home",
             "usuario",
+
+            //vistas clientes
             "listacliente",
             "agregarcliente",
+            "detallecliente",
+
+            //vistas curso
             "listacurso",
             "agregarcurso",
+
+            //vista usuarios
             "listausuario",
             "agregarusuario",
+
+
+            //vistas reportes
             "graficos"
         ];
 

@@ -20,6 +20,10 @@ class mainModel
         return $respuesta;
      }
 
+     protected function agregar_cuenta($datos){
+        $sql=self::conectar()->prepare("INSERT INTO ");
+     }
+
      //encriptacion de el suario
      public static function encryption($string){
         $output=FALSE;

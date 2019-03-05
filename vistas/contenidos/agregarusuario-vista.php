@@ -19,7 +19,8 @@
                 <h1 class="card-title"> Verifique todos los datos ingresados antes de confirmar</h1>
                 <hr>
 
-                <form class="forms-sample">
+                <form data-form="save"  action="<?php echo SERVERURL;?>ajax/administradorAjax.php" method="POST" class="forms-sample FormularioAjax" 
+                autocomplete="off" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-4">
                             <!--nombre/apellidos/correo-->
@@ -35,16 +36,23 @@
                                     <input type="text" class="form-control" id="exampleInputPassword1"
                                         placeholder="Apellidos">
                                 </div>
-                            </div>
+                            
 
-                            <div class="form-group">
+                            <div class=" col-md-6 form-group">
                                 <label for="exampleInputPassword1">Correo</label>
                                 <input type="email" class="form-control" id="exampleInputPassword1"
                                     placeholder="Correo">
                             </div>
-                            <div class="form-group">
+                            <div class="col-md-6 form-group">
                                 <label for="exampleInputEmail1">Teléfono</label>
                                 <input type="text" class="form-control" id="" placeholder="Telefono">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                       
+                            <label for="exampleInputEmail1">Seleccione una foto</label>
+                             <input class="form-control" type="file" name="myFile">
+                                  
+                            </div>
                             </div>
                         </div>
 
@@ -79,28 +87,28 @@
                             <h4>Permisos</h4>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <div class="form-check form-check-flat">
+                                    <div class="form-radio">
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input"> Permiso 1
-                                            <i class="input-helper"></i></label>
-                                    </div>
-                                    <div class="form-check form-check-flat">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input"> Permiso 2
-                                            <i class="input-helper"></i></label>
-                                    </div>
-                                    <div class="form-check form-check-flat">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input"> Permiso 3
-                                            <i class="input-helper"></i></label>
-                                    </div>
-                                    <div class="form-check form-check-flat">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input"> Permiso 4
-                                            <i class="input-helper"></i></label>
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="" checked=""> 
+                                        Nivel 1 : Control total del sistema 
+                                        <i class="input-helper"></i></label>
                                     </div>
 
+                                    <div class="form-radio">
+                                        <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"> 
+                                        Nivel 2 : Permiso para registro y actualización
+                                        <i class="input-helper"></i></label>
+                                    </div>
+
+                                    <div class="form-radio">
+                                        <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"> 
+                                        Nivel 3 : Permiso para registro
+                                        <i class="input-helper"></i></label>
+                                    </div>
                                 </div>
+
                             </div>
 
 
@@ -109,11 +117,13 @@
                     </div>
                     <div class="row">
                         <div class="form-group">
-                            <a href="index.php" class="btn btn-success"><i class="fa fa-check"></i> Agregar</a>
+                            <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Agregar</button>
                             <a href="index.php" class="btn btn-info"><i class="fa fa-meh-o"></i> Cancel</a>
                         </div>
                     </div>
                 </form>
+                <div class="RespuestaAjax">
+                </div>
 
 
             </div>

@@ -19,7 +19,8 @@
         <h4 class="card-title">LLene el formulario completamente</h4>
 
         <hr>
-        <form action="">
+        <form data-form="save"  action="<?php echo SERVERURL;?>ajax/administradorAjax.php" method="POST" class="forms-sample FormularioAjax" 
+                autocomplete="off" enctype="multipart/form-data">
           <div class="row">
             <div class="form-group col-md-4">
               <label for="exampleFormControlSelect1">Tipo</label>
@@ -80,10 +81,9 @@
             <div class="form-group col-md-4">
               <label for="exampleFormControlSelect1">Modalidad</label>
               <select class="form-control form-control-lg" id="exampleFormControlSelect1">
-                <option value="">modalidad 1</option>
-                <option value="">modalidad 2</option>
-                <option value="">modalidad 3</option>
-                <option value="">modalidad 4</option>
+                <option value="">Virtual en Vivo</option>
+                <option value="">Virtual </option>
+           
               </select>
             </div>
             <div class="form-group col-md-4">
@@ -95,7 +95,7 @@
           <!--botones-->
           <div class="row">
             <div class="form-group">
-              <a href="index.php" class="btn btn-success"><i class="fa fa-check"></i> Agregar</a>
+            <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Agregar</button>
               <button class="btn btn-info"><i class="fa fa-meh-o"></i> Cancel</button>
             </div>
           </div>
