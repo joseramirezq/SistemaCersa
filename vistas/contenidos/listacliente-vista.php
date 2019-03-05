@@ -146,39 +146,6 @@
                             <!--fin de registro de un alumno-->
 
 
-
-
-
-                            <!--resgistro de un alumno-->
-                            <tr>
-                                <td>A0001</td>
-                                <td>Jose Luis</td>
-                                <td>Ramirez Quiroz</td>
-                                <td>jlramirezq@unc.edu.pe</td>
-                                <td class="text-danger"> 964923450</td>
-                                <td>Cajamarca</td>
-                                <td>
-                                    <button type="button" class="btn btn-inverse-dark ">Ver</button>
-                                </td>
-                            </tr>
-                            <!--fin de registro de un alumno-->
-
-
-
-
-
-                            <!--resgistro de un alumno-->
-                            <tr>
-                                <td>A0001</td>
-                                <td>Jose Luis</td>
-                                <td>Ramirez Quiroz</td>
-                                <td>jlramirezq@unc.edu.pe</td>
-                                <td class="text-danger"> 964923450</td>
-                                <td>Cajamarca</td>
-                                <td>
-                                    <button type="button" class="btn btn-inverse-dark ">Ver</button>
-                                </td>
-                            </tr>
                             <!--fin de registro de un alumno-->
 
 

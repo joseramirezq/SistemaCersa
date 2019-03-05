@@ -1,30 +1,4 @@
-﻿/* =========================================================
- * bootstrap-datetimepicker.js
- * =========================================================
- * Copyright 2012 Stefan Petre
- *
- * Improvements by Andrew Rowls
- * Improvements by Sébastien Malot
- * Improvements by Yun Lai
- * Improvements by Kenneth Henderick
- * Improvements by CuGBabyBeaR
- * Improvements by Christian Vaas <auspex@auspex.eu>
- *
- * Project URL : http://www.malot.fr/bootstrap-datetimepicker
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ========================================================= */
-
+﻿
 (function(factory){
     if (typeof define === 'function' && define.amd)
       define(['jquery'], factory);
@@ -82,9 +56,9 @@
     // when page switch the datetimepicker div will be removed also.
     this.container = options.container || 'body';
 
-    this.language = options.language || this.element.data('date-language') || 'en';
+    this.language = options.language || this.element.data('date-language') || 'es';
     this.language = this.language in dates ? this.language : this.language.split('-')[0]; // fr-CA fallback to fr
-    this.language = this.language in dates ? this.language : 'en';
+    this.language = this.language in dates ? this.language : 'es';
     this.isRTL = dates[this.language].rtl || false;
     this.formatType = options.formatType || this.element.data('format-type') || 'standard';
     this.format = DPGlobal.parseFormat(options.format || this.element.data('date-format') || dates[this.language].format || DPGlobal.getDefaultFormat(this.formatType, 'input'), this.formatType);
@@ -733,10 +707,10 @@
         this.setTitle('.datetimepicker-minutes', dayMonth + ' ' + dates[this.language].months[month] + ' ' + year);
       }
       this.picker.find('tfoot th.today')
-        .text(dates[this.language].today || dates['en'].today)
+        .text(dates[this.language].today || dates['es'].today)
         .toggle(this.todayBtn !== false);
       this.picker.find('tfoot th.clear')
-        .text(dates[this.language].clear || dates['en'].clear)
+        .text(dates[this.language].clear || dates['es'].clear)
         .toggle(this.clearBtn !== false);
       this.updateNavArrows();
       this.fillMonths();

@@ -1,21 +1,27 @@
 
-<script src="vistas/vendors/js/vendor.bundle.base.js"></script>
-<script src="vistas/vendors/js/vendor.bundle.addons.js"></script>
+<<!--programacion de las altertas-->
+<script src="vistas/js/main.js"></script>
+ 
+<!--jv de laplantilla-->
+<script src="vistas/js/vendor.bundle.base.js"></script>
+<script src="vistas/js/vendor.bundle.addons.js"></script>
+
+<!--jv de los graficos -->
 <script src="vistas/js/off-canvas.js"></script>
 <script src="vistas/js/misc.js"></script>
 <script src="vistas/js/chart.js"></script>
-<script src="vistas/js/main.js"></script>
- 
-<script src="vistas/js2/js/lib/data-table/datatables.min.js"></script>
-<script src="vistas/js2/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-<script src="vistas/js2/js/lib/data-table/dataTables.buttons.min.js"></script>
-<script src="vistas/js2/js/lib/data-table/buttons.bootstrap.min.js"></script>
-<script src="vistas/js2/js/lib/data-table/jszip.min.js"></script>
-<script src="vistas/js2/js/lib/data-table/vfs_fonts.js"></script>
-<script src="vistas/js2/js/lib/data-table/buttons.html5.min.js"></script>
-<script src="vistas/js2/js/lib/data-table/buttons.print.min.js"></script>
-<script src="vistas/js2/js/lib/data-table/buttons.colVis.min.js"></script>
-<script src="vistas/js2/js/init/datatables-init.js"></script>
+
+<!--jv datatable -->
+<script src="vistas/js/data-table/lib/data-table/datatables.min.js"></script>
+<script src="vistas/js/data-table/lib/data-table/dataTables.bootstrap.min.js"></script>
+<script src="vistas/js/data-table/lib/data-table/dataTables.buttons.min.js"></script>
+<script src="vistas/js/data-table/lib/data-table/buttons.bootstrap.min.js"></script>
+<script src="vistas/js/data-table/lib/data-table/jszip.min.js"></script>
+<script src="vistas/js/data-table/lib/data-table/vfs_fonts.js"></script>
+<script src="vistas/js/data-table/lib/data-table/buttons.html5.min.js"></script>
+<script src="vistas/js/data-table/lib/data-table/buttons.print.min.js"></script>
+<script src="vistas/js/data-table/lib/data-table/buttons.colVis.min.js"></script>
+<script src="vistas/js/data-table/init/datatables-init.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -23,7 +29,7 @@ $(document).ready(function() {
 } );
 </script>
 
-
+<!--script de calendarios-->
 <script type="text/javascript" src="vistas/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 <script type="text/javascript" src="vistas/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 <script type="text/javascript">
@@ -62,11 +68,8 @@ $(document).ready(function() {
 
 
 <!--alertas-->
-<script src="vistas/js/jquery-3.1.1.min.js"></script>
+	<script src="vistas/js/jquery-3.1.1.min.js"></script>
 	<script src="vistas/js/sweetalert2.min.js"></script>
-	
-
-	
 	<script src="vistas/js/main.js"></script>
 	<script>
 		$.material.init();
