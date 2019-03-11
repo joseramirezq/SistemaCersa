@@ -2,7 +2,7 @@
 
 
 if ($peticionAjax) {
-    require_once('../modelos/cursoeModelo.php');
+    require_once('../modelos/cursoModelo.php');
 } else {
     require_once('./modelos/cursoModelo.php');
 }
@@ -10,9 +10,9 @@ if ($peticionAjax) {
 class cursoControlador extends cursoModelo{
 
     public function agregar_curso_controlador(){
-        $categoria=mainModel::limpiar_cadena($_POST['categoria']);
+       $categoria=mainModel::limpiar_cadena($_POST['categoria']);
         $nombre=mainModel::limpiar_cadena($_POST['nombre']);
-        $duracion=mainModel::limpiar_cadenas($_POST['duracion']);
+        $duracion=mainModel::limpiar_cadena($_POST['duracion']);
         $descripcion=mainModel::limpiar_cadena($_POST['descripcion']);
         $fechainicio=mainModel::limpiar_cadena($_POST['fechainicio']);
         $fechafin=mainModel::limpiar_cadena($_POST['fechafin']);
@@ -25,9 +25,9 @@ class cursoControlador extends cursoModelo{
         $docente=mainModel::limpiar_cadena($_POST['docente']);
 
         $datosCurso=[
-            "Categoria"=>$categoria,
+           "Categoria"=>$categoria,
             "Nombre"=>$nombre,
-            "Descripcion"=>$descripcion,
+           "Descripcion"=>$descripcion,
             "Duracion"=>$duracion,
             "FechaI"=>$fechainicio,
             "FechaF"=>$fechafin,

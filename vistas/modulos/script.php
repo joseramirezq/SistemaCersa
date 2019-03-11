@@ -30,7 +30,11 @@ $(document).ready(function() {
 </script>
 
 <!--script de calendarios-->
-<script type="text/javascript" src="vistas/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+
+
+
+
+<!--<script type="text/javascript" src="vistas/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 <script type="text/javascript" src="vistas/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 <script type="text/javascript">
     $('.form_datetime').datetimepicker({
@@ -64,7 +68,7 @@ $(document).ready(function() {
 		maxView: 1,
 		forceParse: 0
     });
-</script>
+</script>-->
 
 
 <!--alertas-->

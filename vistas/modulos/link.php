@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="vistas/otros/icofonts-material/css/materialdesignicons.min.css">
 <link rel="stylesheet" href="vistas/otros/icofonts-awesome/css/font-awesome.css">
+
  <!-- 
  <link rel="stylesheet" href="vistas/vendors/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="vistas/vendors/css/vendor.bundle.addons.css">

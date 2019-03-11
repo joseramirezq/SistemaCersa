@@ -10,15 +10,11 @@ if(isset($_POST['nombre'])){
      $instanciaCurso= new cursoControlador();
     //valida los campos requeridos
      if(isset($_POST['nombre'])){
-        echo $instanciaCurso->agregar_curso_controlador();
+        echo  $instanciaCurso->agregar_curso_controlador();
      }else{
 
      }
 
-
  }else{
-    session_start();
-    session_destroy();
-    echo '<script>windows.location.href="'.SERVERURL.'login/"</script>';
- }
+}
  
