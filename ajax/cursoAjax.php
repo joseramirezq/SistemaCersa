@@ -7,10 +7,10 @@ if(isset($_POST['nombre'])){
      require_once("../controladores/cursoControlador.php");
      
      //INSTANCIOAMOS LA CLASE
-     $insAdmin= new cursoControlador();
+     $instanciaCurso= new cursoControlador();
     //valida los campos requeridos
-     if(isset($_POST['cargo']) && isset($_POST['nombre'])&& isset($_POST['apellidos'])){
-        echo $insAdmin->agregar_curso_controlador();
+     if(isset($_POST['nombre'])){
+        echo $instanciaCurso->agregar_curso_controlador();
      }else{
 
      }
