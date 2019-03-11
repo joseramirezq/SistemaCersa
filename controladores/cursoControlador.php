@@ -24,11 +24,6 @@ class cursoControlador extends cursoModelo{
         $modalidad=mainModel::limpiar_cadena($_POST['modalidad']);
         $docente=mainModel::limpiar_cadena($_POST['docente']);
 
-
-        $sql->bindParam(":Horascerti",$datos['Horascerti']);
-        $sql->bindParam(":Docente",$datos['Docente']);
-        $sql->bindParam(":Modalidad",$datos['Modalidad']);
-
         $datosCurso=[
             "Categoria"=>$categoria,
             "Nombre"=>$nombre,
