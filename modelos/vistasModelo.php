@@ -14,10 +14,13 @@ class vistasModelo
             "listacliente",
             "agregarcliente",
             "detallecliente",
+            "editarcliente",
 
             //vistas curso
             "listacurso",
             "agregarcurso",
+            "detallecurso",
+            "editarcurso",
 
             //vista usuarios
             "listausuario",
@@ -25,7 +28,15 @@ class vistasModelo
 
 
             //vistas reportes
-            "graficos"
+            "graficos",
+
+            //sesiones
+            "sesioncurso",
+            "sesionestados"
+
+
+            //prematricula
+            
         ];
 
         //si el valor que recibe de el controladro esta en la lista blanca
@@ -40,7 +51,11 @@ class vistasModelo
             $contenido = "login";
         } elseif ($vistas == "index") {
             $contenido = "login";
-        } else {
+        } elseif($vistas == "prematricula") {
+            $contenido = "prematricula";
+        }else if($vistas=="formularioinfo"){
+            $contenido = "formularioinfo";
+        }else{
             $contenido = "404";
         }
         return $contenido;

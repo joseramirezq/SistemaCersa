@@ -22,8 +22,8 @@
                 <h1 class="card-title"> Verifique todos los datos ingresados antes de confirmar</h1>
                 <hr>
 
-                <form data-form="save"  action="<?php echo SERVERURL;?>ajax/administradorAjax.php" method="POST" class="forms-sample FormularioAjax" 
-                autocomplete="off" enctype="multipart/form-data">
+                <form data-form="save"  action="<?php echo SERVERURL;?>ajax/clienteAjax.php" method="POST" class="forms-sample FormularioAjax" 
+                autocomplete="off" >
                  <div class="row">
                         <div class="col-md-4">
                             <!--nombre/apellidos/correo-->
@@ -31,24 +31,25 @@
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <label for="exampleInputEmail1">Nombres</label>
-                                    <input type="text" class="form-control" id="" placeholder="Nombre">
+                                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
                                 </div>
 
                                 <div class="col-md-6 form-group">
                                     <label for="exampleInputPassword1">Apellidos</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1"
+                                    <input type="text" class="form-control"  name="apellidos" id="apellidos" 
                                         placeholder="Apellidos">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Correo</label>
-                                <input type="email" class="form-control" id="exampleInputPassword1"
+                                <input type="email" class="form-control"  name="correo" id="correo" 
                                     placeholder="Correo">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Teléfono</label>
-                                <input type="text" class="form-control" id="" placeholder="Telefono">
+                                <input type="text" class="form-control"  name="telefono" id="telefono" 
+                                 placeholder="Telefono">
                             </div>
                         </div>
 
@@ -57,16 +58,16 @@
 
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Profesión</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                <input type="text" class="form-control"  name="profesion" id="profesion" 
                                     placeholder="Profesion">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Grado</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="grado">
+                                <input type="text" class="form-control"  name="grado" id="grado"  placeholder="grado">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Pais</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="pais" value="Perú">
+                                <input type="text" class="form-control"  name="pais" id="pais"  placeholder="pais" value="Perú">
                             </div>
                         </div>
 
@@ -75,17 +76,17 @@
 
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Departamento</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                <input type="text" class="form-control"  name="departamento" id="departamento" 
                                     placeholder="Departamento">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Distrito</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                <input type="text" class="form-control"  name="distrito" id="distrito" 
                                     placeholder="Distrito">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Direccion</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                <input type="text" class="form-control"  name="direccion" id="direccion" 
                                     placeholder="Direccion">
                             </div>
                         </div>

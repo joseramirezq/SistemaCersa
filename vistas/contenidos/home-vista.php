@@ -66,7 +66,7 @@
                     <br><br>
                       <h4 class="text-center">Agregar Curso / Dip</h4>
                       <div class="text-center">
-                        <a href="cursonuevo.php"><button type="button" class="btn btn-icons btn-lg btn-rounded btn-outline-primary">
+                        <a href="<?php SERVERURL;?>agregarcurso"><button type="button" class="btn btn-icons btn-lg btn-rounded btn-outline-primary">
                             <i class="fa fa-plus fa-10x"></i>
                           </button>
                           </a>
@@ -107,12 +107,13 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-6"> 
-                      <a href="cursodetalle.php"><button type="button" class="btn btn-success btn-fw"> <i class="fa fa-star-o"></i> Disponible</button></a>
+                      <div class="col-md-12">
+                       <div class="btn-group" role="group" aria-label="First group">
+                       <a href="<?php SERVERURL;?>sesioncurso"><button type="button" class="btn btn-success"><i class="fa fa-star-o"></i> Disponible</button></a>
+                        <a href="http://"><button type="button" class="btn btn-dark"><i class="fa fa-eye"></i> Ver</button></a>
+                          </div>
                       </div>
-                      <div class="col-md-6">
-                      <button type="button" class="mb-0 btn btn-dark btn-fw"> <i class="fa fa-eye"></i> Ver</button>
-                      </div>
+                    
                     </div>
                     
                   

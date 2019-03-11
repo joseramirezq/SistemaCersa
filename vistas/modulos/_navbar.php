@@ -11,16 +11,16 @@
         <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
        
           <li class="nav-item">
-            <a href="home" class="nav-link">Inicio
+            <a href="<?php SERVERURL;?>home" class="nav-link">Inicio
               <span class="badge badge-primary ml-1"><i class="fa fa-book"></i> Cursos/Diplomados <i class="fa fa-graduation-cap"></i></span>
             </a>
           </li>
           <li class="nav-item active">
-            <a href="listacliente" class="nav-link">
+            <a href="<?php SERVERURL;?>listacliente" class="nav-link">
             <i class="fa fa-child"></i>Clientes</a>
           </li>
           <li class="nav-item">
-            <a href="graficos" class="nav-link">
+            <a href="<?php SERVERURL;?>graficos" class="nav-link">
             <i class="fa fa-bar-chart-o"></i>Reportes</a>
           </li>
         </ul>
@@ -152,28 +152,17 @@
 
           <li class="nav-item dropdown d-none d-xl-inline-block">
             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-              <span class="profile-text">Usuario 1</span>
+            <!--nombre del usuario que ha iniciado sesion-->  
+            <span class="profile-text">Usuario 1</span>
               <img class="img-xs rounded-circle" src="vistas/images/faces/face1.jpg" alt="Profile image">
             </a>
-           <!--Icons de mas/perfil/reloj--> 
+        
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-              <a class="dropdown-item p-0">
-                <div class="d-flex border-bottom">
-                  <div class="py-3 px-4 d-flex align-items-center justify-content-center">
-                    <i class="mdi mdi-bookmark-plus-outline mr-0 text-gray"></i>
-                  </div>
-                  <div class="py-3 px-4 d-flex align-items-center justify-content-center border-left border-right">
-                    <i class="mdi mdi-account-outline mr-0 text-gray"></i>
-                  </div>
-                  <div class="py-3 px-4 d-flex align-items-center justify-content-center">
-                    <i class="mdi mdi-alarm-check mr-0 text-gray"></i>
-                  </div>
-                </div>
-              </a>
-              <a class="dropdown-item mt-2">
+          
+              <a href="<?php SERVERURL;?>"  class="dropdown-item mt-2">
                 Configuracion
               </a>
-              <a class="dropdown-item">
+              <a href="<?php SERVERURL;?>login"  class="dropdown-item">
                 Cerrar Sesión
               </a>
             </div>

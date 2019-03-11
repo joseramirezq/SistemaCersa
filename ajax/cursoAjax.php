@@ -4,13 +4,13 @@
 //echo "probando al admin";
 
 if(isset($_POST['nombre'])){
-     require_once("../controladores/administradorControlador.php");
+     require_once("../controladores/cursoControlador.php");
      
      //INSTANCIOAMOS LA CLASE
-     $insAdmin= new administradorControlador();
+     $insAdmin= new cursoControlador();
     //valida los campos requeridos
      if(isset($_POST['cargo']) && isset($_POST['nombre'])&& isset($_POST['apellidos'])){
-        echo $insAdmin->agregar_administrador_controlador();
+        echo $insAdmin->agregar_curso_controlador();
      }else{
 
      }
@@ -22,6 +22,3 @@ if(isset($_POST['nombre'])){
     echo '<script>windows.location.href="'.SERVERURL.'login/"</script>';
  }
  
- /*require_once("../controladores/administradorControlador.php");
- $insAdmin= new administradorControlador();
- echo $insAdmin->agregar_administrador_controlador();*/

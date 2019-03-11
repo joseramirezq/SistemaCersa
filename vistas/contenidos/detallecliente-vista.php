@@ -10,7 +10,7 @@
 
                     <div class="col-md-4">
                         <div class="btn-group dropdown float-right">
-                            <a href="alumnoconfig.php">
+                            <a href="<?php SERVERURL;?>editarcliente">
                                 <button type="button" class="btn btn-warning btn-sm" aria-haspopup="true"
                                     aria-expanded="false">
                                     Configurar

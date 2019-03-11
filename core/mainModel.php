@@ -20,9 +20,182 @@ class mainModel
         return $respuesta;
      }
 
+     //crear cuentas /usuarios
      protected function agregar_cuenta($datos){
-        $sql=self::conectar()->prepare("INSERT INTO ");
+        $sql=self::conectar()->prepare("INSERT INTO 
+        usuario(idcargo, nombre_us, apellidos_us, correo_us, telefono_us ,foto_us, usuario_us, pass_us, estado_us)
+         VALUES(:Idcargo,:Nombre,:Apellidos, :Correo, :Telefono, :Foto, :Usuario, :Pass, :Estado)");
+
+         $sql->bindParam(":Idcargo",$datos['Idcargo']);
+         $sql->bindParam(":Nombre",$datos['Nombre']);
+         $sql->bindParam(":Apellidos",$datos['Apellidos']);
+         $sql->bindParam(":Correo",$datos['Correo']);
+         $sql->bindParam(":Telefono",$datos['Telefono']);
+         $sql->bindParam(":Foto",$datos['Foto']);
+         $sql->bindParam(":Usuario",$datos['Usuario']);
+         $sql->bindParam(":Pass",$datos['Pass']);
+         $sql->bindParam(":Estado",$datos['Estado']);
+
+         $sql->execute();
+         return $sql;
+        
      }
+     //eliminar cuenta
+     protected function eliminar_cuenta($codigo){
+         $sql=self::conectar()->prepare("DELETE FROM usuario WHERE idusuario=:Idusuario");
+          $sql->bindParam("Idusuario",$codigo);
+         $sql->execute();
+         return $sql;
+
+     }
+
+     //tablas de insercion y eliminacion que se utilizaran en otras modelos
+     //inicio
+     //inicio
+
+     //tabla cliente
+     protected function agregar_cliente($datos){
+        $sql=self::conectar()->prepare("INSERT INTO 
+        cliente(nombres_cli, apellidos_cli, correo_cli, telefono_cli, profesion_cli, grado_cli, pais_cli, departamento_cli, distrito_cli, direccion_cli)
+        VALUES(:Nombre, :Apellidos, :Correo, :Telefono, :Profesion, :Grado, :Pais, :Departamento, :Distrito, :Direccion)");
+        $sql->bindParam(":Nombre",$datos['Nombre']);
+        $sql->bindParam(":Apellidos",$datos['Apellidos']);
+        $sql->bindParam(":Correo",$datos['Correo']);
+        $sql->bindParam(":Telefono",$datos['Telefono']);
+        $sql->bindParam(":Profesion",$datos['Profesion']);
+        $sql->bindParam(":Grado",$datos['Grado']);
+        $sql->bindParam(":Pais",$datos['Pais']);
+        $sql->bindParam(":Departamento",$datos['Departamento']);
+        $sql->bindParam(":Distrito",$datos['Distrito']);
+        $sql->bindParam(":Direcccion",$datos['Direccion']);
+
+        $sql->execute();
+        return $sql;
+     }
+     protected function eliminar_cliente($codigo){
+         $sql=self::conectar()->prepare("DELETE FROM cliente WHERE idcliente=:Idcliente");
+         $sql->bindParam("Idcliente",$codigo);
+         $sql->execute();
+         return $sql;
+
+     }
+
+     //tabla curso 
+     protected function agregar_especialidad($datos){
+         $sql=self::conectar()->prepare("INSERT INTO 
+         especialidad(idcategoria, nombre_es, descripcion_es, duracion_es, fecha_inicio, fecha_fin , horas_certificado, costo_matricula, costo_certi, costo_alternativo)
+         VALUES(:Idcategoria, :Nombre, :Descripcion, :Duracion , :FechaI, :FechaF, :Horascerti, :Costomatricula, :Costocerti, :Costoalternativo )");
+         $sql->bindParam(":Idcategoria",$datos['Idcategoria']);
+         $sql->bindParam(":Nombre",$datos['Nombre']);
+         $sql->bindParam(":Descripcion",$datos['Descripcion']);
+         $sql->bindParam(":Duracion",$datos['Duracion']);
+         $sql->bindParam(":FechaI",$datos['FechaI']);
+         $sql->bindParam(":FechaF",$datos['FechaF']);
+         $sql->bindParam(":Horascerti",$datos['Horascerti']);
+         $sql->bindParam(":Costomatricula",$datos['Costomatricula']);
+         $sql->bindParam(":Costocerti",$datos['Costocerti']);
+         $sql->bindParam(":Costoalternativo",$datos['Costoalternativo']);
+
+         $sql->execute();
+         return $sql;
+     }
+
+     protected function eliminar_especialidad($codigo){
+        $sql=self::conectar()->prepare("DELETE FROM especilidad WHERE idespecilidad=:Idespecialidad");
+        $sql->bindParam(":Idespecialidad", $codigo);
+        $sql->execute();
+        return $sql;
+     }
+
+     //tabla interes //la mas grande de todas las tablas xd
+     
+     protected function agregar_interes($datos){
+        $sql=self::conectar()->prepare("INSERT INTO 
+        interes(idestado, idusuario, idespecialidad, idcliente, descri_estado, fecha_notificacion)
+        VALUES(:Idestado, :Idusuario, :Idespecialiad, :Idcliente, :Descripcion, :Fechanotificacion)");
+        $sql->bindParam(":Idestado",$datos['Idestado']);
+        $sql->bindParam(":Idusuario",$datos['Idusuario']);
+        $sql->bindParam(":Idespecialidad",$datos['Idespecialidad']);
+        $sql->bindParam(":Idcliente",$datos['Idcliente']);
+        $sql->bindParam(":Descripcion",$datos['Descripcion']);
+        $sql->bindParam(":Fechanotificacion",$datos['Fechanotificacion']);
+        
+        $sql->execute();
+        return $sql;
+     }
+     protected function eliminar_interes($datos){
+         $sql=self::conectar()->prepare("DELETE FROM interes WHERE idinteres=:Idinteres");
+         $sql->execute();
+         return $sql;
+     }
+
+     //tablas opcionales
+
+     //tabla cargo
+     protected function agregar_cargo($datos){
+         $sql=self::conectar()->prepare("INSERT INTO 
+         cargo(puesto, descripion)
+         VALUES(:Puesto, :Descripcion)");
+         $sql->bindParam(":Pueso",$datos['Puesto']);
+         $sql->bindParam(":Descripcion",$datos['Descripcion']);
+         $sql->execute();
+         return $sql;
+     }
+     protected function eliminar_cargo($codigo){
+         $sql=self::conectar()->prepare("DELETE FROM cargo WHERE idcargo=:Idcargo");
+         $sql->bindParam(":Idcargo",$codigo);
+         $sql->execute();
+         return $sql;
+
+     }
+
+     //tabla categoria
+     protected function agregar_categoria($datos){
+         $sql=self::conectar()->prepare("INSERT INTO
+         categoria(nombre_cat, descripcion_cat)
+         VALUES(:Nombre, :Descripcion)");
+         $sql->bindParam(":Nombre", $datos['Nombre']);
+         $sql->bindParam(":Descripcion", $datos['Descripcion']);
+         $sql->execute();
+        return $sql;
+     }
+     protected function eliminar_categoria($codigo){
+         $sql=self::conectar()->prepare("DELETE FROM categoria WHERE idcategoria=:Idcategoria");
+         $sql->bindParam("Idcategoria",$codigo);
+         $sql->execute();
+         return $sql;
+   
+     }
+
+     //estado
+     protected function agregar_estado($datos){
+        $sql=self::conectar()->prepare("INSERT INTO 
+        estado(nombre_estado, descri_estado, color)
+        VALUES(:Nombre, :Descripcion, :Color)");
+        $sql->bindParam(":Nombre", $datos['Nombre']);
+        $sql->bindParam(":Descripcion", $datos['Descripcion']);
+        $sql->bindParam(":Color", $datos['Color']);
+        $sql->execute();
+        return $sql;
+     }
+
+     protected function eliminar_estado($codigo){
+         $sql=self::conectar()->prepare("DELETE FROM estado WHERE idestado=:Idestado");
+         $sql->bindParam("Idestado",$codigo);
+         $sql->execute();
+         return $sql;
+
+     }
+
+     //fin de tablas para otros modelos 
+     //fin
+     //fin 
+
+
+
+
+
+
 
      //encriptacion de el suario
      public static function encryption($string){
@@ -71,18 +244,18 @@ class mainModel
         if($datos['Alerta'=="simple"]){
            $alerta="
             <script>
-                Swal.fire(
+             swal (
                     '".$datos['Titulo']."',
                     '".$datos['Texto']."',
                     '".$datos['Tipo']."'
-                );
+                )
             </script>
             ";
-        }elseif($datos['Alerta'=="recargar"]){
+        }else if($datos['Alerta'=="recargar"]){
 
             $alerta="
             <script>
-                Swal.fire({
+                swal({
                     title: '".$datos['Titulo']."',
                     text: '".$datos['Texto']."',
                     type:  '".$datos['Tipo']."',
@@ -94,11 +267,11 @@ class mainModel
             ";
 
         }
-        elseif($datos['Alerta'=="limpiar"]){
+        else if($datos['Alerta'=="limpiar"]){
 
             $alerta="
             <script>
-                Swal.fire({
+                swal({
                     title: '".$datos['Titulo']."',
                     text: '".$datos['Texto']."',
                     type:  '".$datos['Tipo']."',
