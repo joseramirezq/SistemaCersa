@@ -132,15 +132,6 @@ class mainModel
      //tablas opcionales
 
      //tabla cargo
-     protected function agregar_cargo($datos){
-         $sql=self::conectar()->prepare("INSERT INTO 
-         cargo(puesto, descripion)
-         VALUES(:Puesto, :Descripcion)");
-         $sql->bindParam(":Pueso",$datos['Puesto']);
-         $sql->bindParam(":Descripcion",$datos['Descripcion']);
-         $sql->execute();
-         return $sql;
-     }
      protected function eliminar_cargo($codigo){
          $sql=self::conectar()->prepare("DELETE FROM cargo WHERE idcargo=:Idcargo");
          $sql->bindParam(":Idcargo",$codigo);
@@ -148,17 +139,7 @@ class mainModel
          return $sql;
 
      }
-
      //tabla categoria
-     protected function agregar_categoria($datos){
-         $sql=self::conectar()->prepare("INSERT INTO
-         categoria(nombre_cat, descripcion_cat)
-         VALUES(:Nombre, :Descripcion)");
-         $sql->bindParam(":Nombre", $datos['Nombre']);
-         $sql->bindParam(":Descripcion", $datos['Descripcion']);
-         $sql->execute();
-        return $sql;
-     }
      protected function eliminar_categoria($codigo){
          $sql=self::conectar()->prepare("DELETE FROM categoria WHERE idcategoria=:Idcategoria");
          $sql->bindParam("Idcategoria",$codigo);
@@ -166,19 +147,7 @@ class mainModel
          return $sql;
    
      }
-
      //estado
-     protected function agregar_estado($datos){
-        $sql=self::conectar()->prepare("INSERT INTO 
-        estado(nombre_estado, descri_estado, color)
-        VALUES(:Nombre, :Descripcion, :Color)");
-        $sql->bindParam(":Nombre", $datos['Nombre']);
-        $sql->bindParam(":Descripcion", $datos['Descripcion']);
-        $sql->bindParam(":Color", $datos['Color']);
-        $sql->execute();
-        return $sql;
-     }
-
      protected function eliminar_estado($codigo){
          $sql=self::conectar()->prepare("DELETE FROM estado WHERE idestado=:Idestado");
          $sql->bindParam("Idestado",$codigo);

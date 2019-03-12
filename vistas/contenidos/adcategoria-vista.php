@@ -18,82 +18,72 @@
 </div>
 
 <!--tabla de liosta de clientes-->
+<!--tabla de liosta de clientes-->
 <div class="row">
-  <div class="col-lg-12 grid-margin stretch-card">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Lista de Usuarios</h4>
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Lista de Estado</h4>
+                <hr>
 
-        <!--formulario de busqueda-->
-        <form action="">
-          <div class="input-group col-xs-12">
-            <input type="text" class="form-control" placeholder="Escribe nombre">
-            <span class="input-group-append">
-              <button class="file-upload-browse btn btn-inverse-success" type="button">Buscar</button>
-            </span>
-          </div>
-        </form>
-
-        <!--fin fformulario de bisqueda-->
-        <hr>
-
-        <div class="table-responsive">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Codigo</th>
-                <th>Usuario</th>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Cargo</th>
-                <th>Configuracion</th>
-                <th>Detalle</th>
-
-              </tr>
-            </thead>
-            <tbody>
-
-              <!--resgistro de un alumno-->
-              <tr>
-                <td>U0001</td>
-                <td>70212063</td>
-                <td>Jose Luis</td>
-                <td>Ramirez Quiroz</td>
-                <td>Telemarket</td>
-                <td>
-
-                  <button type="button" class="btn btn-warning btn-sm" aria-haspopup="true" aria-expanded="false"
-                    data-toggle="modal" data-target="#nusereditar">
-                    <i class="fa fa-pencil"></i> Editar
-                  </button>
-
-                  <button type="button" class="btn btn-danger btn-sm" aria-haspopup="true" aria-expanded="false"
-                    data-toggle="modal" data-target="#nusereliminar">
-                    <i class="fa fa-trash-o"></i> Eliminar
-                  </button>
-                </td>
-                <td>
-                  <button type="button" class="btn btn-dark btn-sm" aria-haspopup="true" aria-expanded="false"
-                    data-toggle="modal" data-target="#nuserdetalle">
-                    <i class="fa fa-drivers-license-o"></i> Ver
-                  </button>
-                </td>
-              </tr>
-              <!--fin de registro de un alumno-->
+                <div class="table-responsive">
+                    <table class="table table-hover" id="bootstrap-data-table"
+                    class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                                
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                                 <th>Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--resgistro de un alumno-->
+                            <tr>
+                                <td>ES001</td>
+                                <td>Prematricula</td>
+                                <td>Esta persona es nueva</td>
+                                
+                                <td>
+                                 <button type="button" class="btn btn-warning btn-sm" aria-haspopup="true" aria-expanded="false"
+                                    data-toggle="modal" data-target="#nusereditar">
+                                    <i class="fa fa-pencil"></i> Editar
+                                  </button>
+                                </td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm" aria-haspopup="true" aria-expanded="false"
+                                    data-toggle="modal" data-target="#nusereliminar">
+                                    <i class="fa fa-trash-o"></i> Eliminar
+                                  </button>
+                                </td>
+                                <td>
+                                <button type="button" class="btn btn-dark btn-sm" aria-haspopup="true" aria-expanded="false"
+                                  data-toggle="modal" data-target="#nuserdetalle">
+                                  <i class="fa fa-drivers-license-o"></i> Ver
+                                </button>
+                                </td>
+                            </tr>
+                            <!--fin de registro de un alumno-->
 
 
 
+                            <!--fin de registro de un alumno-->
+
+
+                            <!--fin de registro de un alumno-->
 
 
 
-            </tbody>
-          </table>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 
 
 
