@@ -23,11 +23,11 @@
 <script src="vistas/js/data-table/lib/data-table/buttons.colVis.min.js"></script>
 <script src="vistas/js/data-table/init/datatables-init.js"></script>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 $(document).ready(function() {
   $('#bootstrap-data-table-export').DataTable();
 } );
-</script>
+</script>-->
 
 <!--script de calendarios-->
 
@@ -76,6 +76,6 @@ $(document).ready(function() {
 	<script src="vistas/js/jquery.min.js"></script>
 	<script src="vistas/js/sweetalert2.min.js"></script>
 	<script src="vistas/js/main.js"></script>
-	<script>
+<!--	<script>
 		$.material.init();
-	</script>
+	</script>-->

@@ -1,12 +1,12 @@
 <?php
- $peticionAjax=true;
+  $peticionAjax=true;
  require_once("../core/configgeneral.php");
 //echo "probando al admin";
 
 if(isset($_POST['nombre'])){
      require_once("../controladores/administradorControlador.php");
      
-     //INSTANCIOAMOS LA CLASE
+     //INSTANCIOAMOS LA CLASE//
      $insAdmin= new administradorControlador();
     //valida los campos requeridos
      if(isset($_POST['cargo']) && isset($_POST['nombre'])&& isset($_POST['apellidos'])){
@@ -19,7 +19,7 @@ if(isset($_POST['nombre'])){
  }else{
     session_start();
     session_destroy();
-    echo '<script>windows.location.href="'.SERVERURL.'login/"</script>';
+    echo '<script> window.location.href="'.SERVERURL.'login" </script>';
  }
  
  /*require_once("../controladores/administradorControlador.php");

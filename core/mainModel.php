@@ -193,7 +193,36 @@ class mainModel
 
 
 
-
+     //funcion bitacora
+     protected function guardar_bitacora($datos){
+        $sql=self::conectar()->prepare("INSERT INTO
+         bitacora(BitacoraCodigo, BitacoraFecha, BitacoraHoraInicio, BitacoraHoraFinal, BitacoraTipo, BitacoraYear, CuentaUsuario )
+         values(:Codigo, :Fecha, :HoraInicio, :HoraFinal, :Tipo, :Anio, :Cuenta)");
+         $sql->bindParam(":Codigo",$datos['Codigo']);
+         $sql->bindParam(":Fecha",$datos['Fecha']);
+         $sql->bindParam(":HoraInicio",$datos['HoraInicio']);
+         $sql->bindParam(":HoraFinal",$datos['HoraFinal']);
+         $sql->bindParam(":Tipo",$datos['Tipo']);
+         $sql->bindParam(":Anio",$datos['Anio']);
+         $sql->bindParam(":Cuenta",$datos['Cuenta']);
+         $sql->execute();
+         return $sql;
+       }
+       //funccion actualizar bitacora
+       protected function actualizar_bitacora($codigo,$hora){
+        $sql=self::conectar()->prepare("UPDATE bitacora SET BitacoraHoraFinal=:Hora WHERE CuentaUsuario=:Codigo");
+        $sql->bindParam(":Hora",$hora);
+        $sql->bindParam(":Codigo",$codigo);
+         $sql->execute();
+         return $sql;
+    }
+    // funccion eliminar bitacora
+    protected function eliminar_bitacora($codigo){
+        $sql=self::conectar()->prepare("DELETE FROM bitacora WHERE CuentaUsuario=:Cuenta");
+        $sql->bindParam(":Cuenta",$codigo);
+        $sql->execute();
+        return $sql;
+    }
 
 
 
@@ -241,17 +270,17 @@ class mainModel
     }
 
     protected function sweet_alert($datos){
-        if($datos['Alerta'=="simple"]){
+        if($datos['Alerta']=="simple"){
            $alerta="
-            <script>
-             swal (
+           <script>
+             swal(
                     '".$datos['Titulo']."',
                     '".$datos['Texto']."',
                     '".$datos['Tipo']."'
-                )
+             );
             </script>
             ";
-        }else if($datos['Alerta'=="recargar"]){
+        }else if($datos['Alerta']=="recargar"){
 
             $alerta="
             <script>
@@ -267,7 +296,7 @@ class mainModel
             ";
 
         }
-        else if($datos['Alerta'=="limpiar"]){
+        elseif($datos['Alerta']=="limpiar"){
 
             $alerta="
             <script>

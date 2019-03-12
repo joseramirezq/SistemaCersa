@@ -28,15 +28,16 @@
            if($pass1!=$pass2){
 
             //alertas para mostrar en caso no se ejecuta algo 
-               /* $alerta=[
+              /*  $alerta=[
                     "Alerta"=>"simple",
                     "Titulo"=>"Ocurrio un error inesperado",
                     "Texto"=>"Las contraseñas que acabas de ingresar no coinciden, intente nuevamente",
                     "Tipo"=>"error"
-                ];
-                return mainModel::sweet_alert($alerta);*/
+                ];*/
+              
                 
-               // echo "las contraseñas no coinciden";
+               echo '<script>  console.log("Hello world!"); </script>';
+               
             }else{
                 $dataUsuario=[
                     "Idcargo"=>$cargo,
@@ -129,7 +130,7 @@
                 
 */
             }
-            //return mainModel::sweet_alert($alerta);
+            return mainModel::sweet_alert($alerta);
             
         }
     }
