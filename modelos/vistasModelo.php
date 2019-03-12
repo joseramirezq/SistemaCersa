@@ -32,7 +32,12 @@ class vistasModelo
 
             //sesiones
             "sesioncurso",
-            "sesionestados"
+            "sesionestados",
+
+            //otrasvistas
+            "adcategoria",
+            "adestados",
+            "adpermisos",
 
 
             //prematricula

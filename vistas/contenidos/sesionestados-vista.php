@@ -183,7 +183,7 @@
                                          
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Fecha" aria-label="Username" aria-describedby="colored-addon1">
+                                        <input type="datetime" class="form-control" placeholder="Fecha"  aria-describedby="colored-addon1">
                                         </div>
                                     </div>
                                     <!--descripcion-->
@@ -194,7 +194,7 @@
                                             <i class=" fa fa-align-left text-white"></i>
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Descripcion" aria-label="Username" aria-describedby="colored-addon2">
+                                        <input type="text" class="form-control" placeholder="Descripcion"  name="descripcion" aria-describedby="colored-addon2">
                                         </div>
                                     </div>
                                     <!--baucher-->

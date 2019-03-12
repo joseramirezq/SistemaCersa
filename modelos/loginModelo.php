@@ -6,6 +6,7 @@ if ($peticionAjax) {
 }
 
 class loginModelo extends mainModel{
+    
     protected function iniciar_sesion_modelo($datos){
         $sql=mainModel::conectar()->prepare("SELECT * FROM usuario
         WHERE usuario_us=:Usuario AND pass_us=:Clave AND estado_us=:Estado");

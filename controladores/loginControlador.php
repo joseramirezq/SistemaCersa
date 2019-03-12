@@ -1,17 +1,22 @@
 <?php
     if ($peticionAjax) {
-        require_once('../modelos/loginModelo');
+        require_once('../modelos/loginModelo.php');
     } else {
-        require_once('./modelos/loginModelo');
+        require_once('./modelos/loginModelo.php');
     }
 
 class loginControlador extends loginModelo{
 
     public function iniciar_sesion_controlador(){
-        $usuario=
+
+        $usuario=mainModel::limpiar_cadena($_POST['usuario']);
+        $pass=mainModel::limpiar_cadena($_POST['pass']);
         $datosLogin=[
-          
+            'Usuario'=>$usuario,
+            'Clave'=>$pass,
+            'Estado'=>1
         ];
+
         $datosCuenta=loginModelo::iniciar_sesion_modelo($datosLogin);
 
         if($datosCuenta-> rowCount()==1){

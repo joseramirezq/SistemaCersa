@@ -4,12 +4,14 @@
         <div class="row w-100">
           <div class="col-lg-4 mx-auto">
             <div class="auto-form-wrapper">
-              <form action="#">
+              
+            <form  data-form="save"  action="<?php echo SERVERURL;?>ajax/loginAjax.php" method="POST" class="forms-sample">
+
                 <h3 class="text-center">Inicio de Sesion</h3><br>
                 <div class="form-group">
                   <label class="label">Usuario</label>
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Username">
+                    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario">
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -20,7 +22,7 @@
                 <div class="form-group">
                   <label class="label">Contraseña</label>
                   <div class="input-group">
-                    <input type="password" class="form-control" placeholder="*********">
+                    <input type="password"  name="pass" id="pass" class="form-control" placeholder="*********">
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
